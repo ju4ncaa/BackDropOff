@@ -10,7 +10,7 @@ pip install rembg
 2. Las imágenes deben ser en formato WebP o PNG, ya que este script utiliza transparencia modo alfa para la eliminación del fondo.
 
 ## ¿Qué es el modo alfa?
-El modo alfa en una imagen indica cuánto es transparente un píxel, variando de completamente transparente a completamente opaco. En el contexto de imágenes PNG, se usa para lograr transparencia y suavizar bordes.
+El modo alfa en una imagen indica cuánto es transparente un píxel, variando de completamente transparente a completamente opaco. Se usa para lograr transparencia y suavizar bordes.
 
 ## Uso
 1. Clona este repositorio o descarga el script backdropoff.py.
