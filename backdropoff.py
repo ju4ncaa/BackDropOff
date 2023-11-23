@@ -52,8 +52,14 @@ def process_image(img_path):
         print(f"\n{RED}[!]{RESET} No se ha encontrado {img_path}, saliendo...\n")
 
 if __name__ == "__main__":
-    # Solicitar al usuario que ingrese la ruta de la imagen
-    img_path = input(f"\n{CYAN}[*]{RESET} Ingresa la ruta de la imagen: ")
-    
-    # Procesar la imagen
-    process_image(img_path)
+    while True:
+        # Solicitar al usuario que ingrese la ruta de la imagen
+        img_path = input(f"\n{CYAN}[*]{RESET} Ingresa la ruta de la imagen: ")
+
+        # Procesar la imagen
+        process_image(img_path)
+
+        # Preguntar al usuario si desea realizar otra operación
+        decision = input(f"\n{CYAN}[*]{RESET} ¿Deseas procesar otra imagen? (s/n): ").lower()
+        if decision != "s":
+            break
