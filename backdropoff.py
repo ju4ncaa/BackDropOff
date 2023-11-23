@@ -3,7 +3,7 @@
 import rembg  # instalar rembg: pip install rembg
 import numpy as np
 import os
-import sys
+from sys import exit
 from PIL import Image
 from colorama import init, Fore
 
