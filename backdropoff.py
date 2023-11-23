@@ -62,4 +62,5 @@ if __name__ == "__main__":
         # Preguntar al usuario si desea realizar otra operación
         decision = input(f"\n{CYAN}[*]{RESET} ¿Deseas procesar otra imagen? (s/n): ").lower()
         if decision != "s":
+            print(f"\n{RED}[!]{RESET} Saliendo...\n")
             break
