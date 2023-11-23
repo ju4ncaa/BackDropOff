@@ -27,23 +27,23 @@ python backdropoff.py
 ## Ejemplo de Uso
 El ejemplo será con la imagen de un tigre
 
-<img src="https://github.com/0xJuaNc4/BackDropOff/assets/130152767/6a08df8a-e558-4ce8-8ada-589a1e404633" width="500px">
+<img src="https://github.com/0xJuaNc4/BackDropOff/assets/130152767/40022d7a-c239-4b30-a4dd-8d7bf6e5bcbe" width="500px">
 
 1. Descargar el contenido del repositorio.
-   
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/d3c810d6-b8b1-40ae-b2df-ab42ddd19349)
+
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/7b270d63-a7e9-482b-ab0b-f955f3413b2f)
 
 3. Ejecutar el script desde la terminal utilizando el comando `python backdropoff.py` o la ruta correspondiente donde se encuentre el script.
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/72423949-9a75-476f-8810-dc184404148c)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/fb224a4b-f211-4709-af0d-0dee69cfc064)
 
 4. Proporcionar la ruta absoluta de una imagen PNG, tambien se puede indicar el nombre de la imagen si esta se encuentra en el directorio del script.
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/aa5c7e7d-ed97-4f15-bdb2-745b64d70499)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/28699cb7-6719-43c8-8500-9bbe6e5f745e)
 
 5. El script procesará la imagen, eliminará el fondo y guardará la nueva imagen en el mismo directorio con el nombre **backdropoff.png**
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/eceea5d3-c8c5-4fa0-8329-52f3a4db40d2)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/8247e63a-99a0-40d1-8381-cd648978bb75)
 
 6. Obtenemos la imagen sin fondo en el directorio BackDropOff
 
