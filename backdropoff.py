@@ -51,6 +51,7 @@ def process_image(img_path):
     else:
         print(f"\n{RED}[!]{RESET} No se ha encontrado {img_path}, saliendo...\n")
 
+# Programa principal
 if __name__ == "__main__":
     while True:
         # Solicitar al usuario que ingrese la ruta de la imagen
