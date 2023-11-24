@@ -32,7 +32,7 @@ def process_image(img_path):
         # Cargar imagen con PIL
         inp_image = Image.open(img_path)
         print(f"\n{GREEN}[*]{RESET} Imagen encontrada\n")
-        print(f"\n{GREEN}[*]{RESET} Imagen {YELLOW}{img_name_ext}{RESET} cargada\n")
+        print(f"\n{GREEN}[*]{RESET} Imagen {YELLOW}{img_name}{RESET} cargada\n")
 
         # Convertir la imagen en un array de numpy
         inp_arr = np.array(inp_image)
