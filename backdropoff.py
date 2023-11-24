@@ -3,7 +3,7 @@
 import rembg  # instalar rembg: pip install rembg
 import numpy as np
 import os
-from sys import exit
+import sys
 from PIL import Image
 from colorama import init, Fore
 
@@ -26,15 +26,19 @@ def check_path(path):
 def process_image(img_path):
     #Procesa la imagen, eliminando el fondo y guardando la nueva imagen.
     if check_path(img_path):
-        # Obtener el nombre de la imagen en la ruta
-        img_name = os.path.basename(img_path)
+        # Obtener el nombre de la imagen con extensión
+        img_name_ext = os.path.basename(img_path)
+
+        # Obtener nombre de la imagen sin extensión
+        img_name = os.path.splitext(os.path.basename(img_path))[0]
+
         # Obtener extensión de la imagen
         img_extension = os.path.splitext(img_path)[-1].lower()
 
         # Cargar imagen con PIL
         inp_image = Image.open(img_path)
         print(f"\n{GREEN}[*]{RESET} Imagen encontrada\n")
-        print(f"\n{GREEN}[*]{RESET} Imagen {YELLOW}{img_name}{RESET} cargada\n")
+        print(f"\n{GREEN}[*]{RESET} Imagen {YELLOW}{img_name_ext}{RESET} cargada\n")
 
         # Convertir la imagen en un array de numpy
         inp_arr = np.array(inp_image)
@@ -46,7 +50,7 @@ def process_image(img_path):
         out_img = Image.fromarray(out_arr)
 
         # Guardando la imagen resultante
-        out_img.save(f'backdropoff{img_extension}')
+        out_img.save(f'backdropoff-{img_name}{img_extension}')
         print(f"\n{GREEN}[*]{RESET} Imagen sin fondo guardada en {YELLOW}{os.getcwd()}{RESET}\n")
     else:
         print(f"\n{RED}[!]{RESET} No se ha encontrado {img_path}, saliendo...\n")
