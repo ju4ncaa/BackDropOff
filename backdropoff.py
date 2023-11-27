@@ -1,3 +1,4 @@
+!/usr/bin/python
 # Author: 0xJuaNc4
 # Módulos
 import rembg  # instalar rembg: pip install rembg
