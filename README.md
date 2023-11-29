@@ -1,4 +1,9 @@
 # BackDropOff
+
+<div align="center">
+  <img src="https://github.com/0xJuaNc4/BackDropOff/assets/130152767/39185e06-7daf-4942-81f1-f280cec91b19" width="300px">
+</div>
+
 Script hecho en Python el cual utiliza la biblioteca rembg para eliminar el fondo de una imagen y guarda la nueva imagen sin fondo en formato WebP o PNG.
 
 ## Requisitos
