@@ -22,7 +22,7 @@ El modo alfa en una imagen indica cuánto es transparente un píxel, variando de
 ## Uso
 1. Clona este repositorio o descarga el script backdropoff.py.
 ```bash
-git clone https://github.com/0xJuaNc4/BackDropOff.git
+git clone https://github.com/0xJuaNc4/BackDropOff
 ```
 2. Ejecuta el script con el comando:
 ```bash
