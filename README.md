@@ -21,7 +21,7 @@ pip3 install -r requeriments.txt
 ## What is alpha mode? 
 The alpha mode in an image indicates how transparent a pixel is, varying from completely transparent to completely opaque. It is used to achieve transparency and soften edges.
 
-## Uso
+## Usage
 1. Clone this repository or download the backdropoff.py script.
 ```bash
 git clone https://github.com/0xJuaNc4/BackDropOff
