@@ -10,7 +10,7 @@ Script created in Python which uses the rembg library to remove the background o
 
 ## Important
 
-1. Make sure you have Python installed. Also, install the rembg module using:
+1. Verify that you have all the necessary modules installed using the command:
 
 ```
 pip3 install -r requeriments.txt
