@@ -13,7 +13,7 @@ Script created in Python which uses the rembg library to remove the background o
 1. Make sure you have Python installed. Also, install the rembg module using:
 
 ```
-pip3 install -r requeriments
+pip3 install -r requeriments.txt
 ```
 
 3. Images must be in WebP or PNG format, as this script uses alpha mode transparency for background removal.
