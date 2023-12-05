@@ -6,15 +6,10 @@
 
 <br>
 
-Script hecho en Python el cual utiliza la biblioteca rembg para eliminar el fondo de una imagen y guarda la nueva imagen sin fondo en formato WebP o PNG.
+Script created in Python which uses the rembg library to remove the background of an image and saves the new image without background in WebP or PNG format.
 
-## Requisitos
-1. Asegúrate de tener Python instalado. Además, instala el módulo rembg utilizando:
-
-```bash
-pip install rembg
-```
-2. Las imágenes deben ser en formato WebP o PNG, ya que este script utiliza transparencia modo alfa para la eliminación del fondo.
+## Important
+Images must be in WebP or PNG format, as this script uses alpha mode transparency for background removal.
 
 ## ¿Qué es el modo alfa?
 El modo alfa en una imagen indica cuánto es transparente un píxel, variando de completamente transparente a completamente opaco. Se usa para lograr transparencia y suavizar bordes.
