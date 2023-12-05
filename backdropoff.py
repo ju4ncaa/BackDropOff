@@ -1,14 +1,13 @@
-#!/usr/bin/python
 #Author: 0xJuaNc4
 
-#Módulos
+#Módules
 import os
 from sys import exit
 from numpy import array
 from rembg import remove
 from PIL import Image
 
-#Paleta de colores
+# Color palette
 class Colors:
     GREEN = "\033[92m"
     RED = "\033[91m"
@@ -16,11 +15,11 @@ class Colors:
     YELLOW = "\033[93m"
     RESET = "\033[0m"
 
-#Función limpiar consola
+#Clear console function
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
-#Comprueba que la ruta introducida sea correcta y contenga una imagen válida.
+#Checks that the path entered is correct and contains a valid image.
 def check_path(path):
     valid_extensions = [".png", ".webp"]
     if os.path.isfile(path) and any(path.lower().endswith(ext) for ext in valid_extensions):
@@ -29,43 +28,43 @@ def check_path(path):
         print(f"\n{Colors.RED}[!]{Colors.RESET} La ruta {Colors.YELLOW}{img_path}{Colors.RESET} no es válida o no tiene una extensión de imagen WebP o PNG.")
         exit(1)
 
-#Procesa la imagen, eliminando el fondo y guardando la nueva imagen.
+#Processes the image, removing the background and saving the new image.
 def process_image(img_path):
     if check_path(img_path):
-        # Obtener el nombre de la imagen con extensión
+        # Get the name of the image with extension
         img_name = os.path.basename(img_path)
         
-        #Cargar imagen con PIL
+        # Load image with PIL
         inp_image = Image.open(img_path)
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen encontrada\n")
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen {Colors.YELLOW}{img_name}{Colors.RESET} cargada\n")
 
-        #Convertir la imagen en un array de numpy
+        # Convert image to numpy array
         inp_arr = array(inp_image)
 
-        #Aplicar la eliminación del fondo con rembg
+        # Apply background removal with rembg
         out_arr = remove(inp_arr)
 
-        #Creando imagen PIL a partir del array resultante
+        # Creating PIL image from the resulting array
         out_img = Image.fromarray(out_arr)
 
-        #Guardando la imagen resultante
+        # Saving the resulting image
         out_img.save(f'backdropoff-{img_name}')
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen sin fondo guardada en {Colors.YELLOW}{os.getcwd()}{Colors.RESET}\n")
     else:
         print(f"\n{Colors.RED}[!]{Colors.RESET} No se ha encontrado {img_path}")
 
-#Programa principal
+# Main program
 if __name__ == "__main__":
     try:
         while True:
-            #Limpiar consola
+            # Clear console
             clear_console()
-            #Solicitar al usuario que ingrese la ruta de la imagen
+            # Ask the user to enter the path of the image
             img_path = input(f"\n{Colors.CYAN}[*]{Colors.RESET} Ingresa la ruta de la imagen: ")
-            #Procesar la imagen
+            # Process the image
             process_image(img_path)
-            #Preguntar al usuario si desea realizar otra operación
+            #Ask the user if he/she wants to perform a different operation.
             user_choice = input(f"\n{Colors.CYAN}[*]{Colors.RESET} ¿Deseas procesar otra imagen? (s/n): ").lower()
             if user_choice != "s":
                 print(f"\n{Colors.RED}[!]{Colors.RESET} Saliendo...")
