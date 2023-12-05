@@ -46,15 +46,15 @@ Download the contents of the repository.
 
 Execute the script from the terminal using the command `python backdropoff.py` or the corresponding path where the script is located.
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/fb224a4b-f211-4709-af0d-0dee69cfc064)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/0f433b53-8e4d-4679-8519-dd0003813bfc)
 
 Specify the absolute path of a PNG image, you can also specify the name of the image if it is located in the script directory.
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/28699cb7-6719-43c8-8500-9bbe6e5f745e)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/8682484c-5f6d-4471-aff2-4078c00c362e)
 
 The script will process the image, remove the background and save the new image in the same directory with the name **backdropoff.png**.
 
-![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/8247e63a-99a0-40d1-8381-cd648978bb75)
+![imagen](https://github.com/0xJuaNc4/BackDropOff/assets/130152767/85a8fdf4-2e29-4d75-8e21-b2b7df14e87b)
 
 We obtain the image without background in the BackDropOff directory.
 
