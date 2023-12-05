@@ -25,7 +25,7 @@ def check_path(path):
     if os.path.isfile(path) and any(path.lower().endswith(ext) for ext in valid_extensions):
         return True
     else:
-        print(f"\n{Colors.RED}[!]{Colors.RESET} La ruta {Colors.YELLOW}{img_path}{Colors.RESET} no es válida o no tiene una extensión de imagen WebP o PNG.")
+        print(f"\n{Colors.RED}[!]{Colors.RESET} The path {Colors.YELLOW}{img_path}{Colors.RESET} is invalid or does not have a WebP or PNG image extension.")
         exit(1)
 
 #Processes the image, removing the background and saving the new image.
@@ -36,8 +36,8 @@ def process_image(img_path):
         
         # Load image with PIL
         inp_image = Image.open(img_path)
-        print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen encontrada\n")
-        print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen {Colors.YELLOW}{img_name}{Colors.RESET} cargada\n")
+        print(f"\n{Colors.GREEN}[*]{Colors.RESET} Image found\n")
+        print(f"\n{Colors.GREEN}[*]{Colors.RESET} Image {Colors.YELLOW}{img_name}{Colors.RESET} loaded\n")
 
         # Convert image to numpy array
         inp_arr = array(inp_image)
@@ -50,9 +50,9 @@ def process_image(img_path):
 
         # Saving the resulting image
         out_img.save(f'backdropoff-{img_name}')
-        print(f"\n{Colors.GREEN}[*]{Colors.RESET} Imagen sin fondo guardada en {Colors.YELLOW}{os.getcwd()}{Colors.RESET}\n")
+        print(f"\n{Colors.GREEN}[*]{Colors.RESET} No background image saved in {Colors.YELLOW}{os.getcwd()}{Colors.RESET}\n")
     else:
-        print(f"\n{Colors.RED}[!]{Colors.RESET} No se ha encontrado {img_path}")
+        print(f"\n{Colors.RED}[!]{Colors.RESET} Not found {img_path}")
 
 # Main program
 if __name__ == "__main__":
@@ -61,13 +61,13 @@ if __name__ == "__main__":
             # Clear console
             clear_console()
             # Ask the user to enter the path of the image
-            img_path = input(f"\n{Colors.CYAN}[*]{Colors.RESET} Ingresa la ruta de la imagen: ")
+            img_path = input(f"\n{Colors.CYAN}[*]{Colors.RESET} Enter the image path: ")
             # Process the image
             process_image(img_path)
             #Ask the user if he/she wants to perform a different operation.
-            user_choice = input(f"\n{Colors.CYAN}[*]{Colors.RESET} ¿Deseas procesar otra imagen? (s/n): ").lower()
-            if user_choice != "s":
-                print(f"\n{Colors.RED}[!]{Colors.RESET} Saliendo...")
+            user_choice = input(f"\n{Colors.CYAN}[*]{Colors.RESET} Do you want to process another image (y/n): ").lower()
+            if user_choice != "y":
+                print(f"\n{Colors.RED}[!]{Colors.RESET} Exit...")
                 break
     except KeyboardInterrupt:
-        print(f"\n\n{Colors.RED}[!]{Colors.RESET} Saliendo...")
+        print(f"\n\n{Colors.RED}[!]{Colors.RESET} Exit...")
